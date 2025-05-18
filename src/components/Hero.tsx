@@ -15,26 +15,26 @@ const titleStyles: TitleStyle[] = [
   {
     id: "default",
     name: "Bold Modern",
-    titleClass: "text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white",
-    descriptionClass: "text-2xl md:text-3xl text-white mb-8 max-w-2xl uppercase"
+    titleClass: "text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white",
+    descriptionClass: "text-xl md:text-2xl lg:text-3xl text-white mb-8 max-w-2xl uppercase"
   },
   {
     id: "elegant",
     name: "Elegant Serif",
-    titleClass: "text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-6 leading-tight text-white italic",
-    descriptionClass: "text-2xl md:text-3xl text-white mb-8 max-w-2xl font-serif"
+    titleClass: "text-5xl md:text-6xl lg:text-7xl font-serif font-medium mb-6 leading-tight text-white italic",
+    descriptionClass: "text-xl md:text-2xl lg:text-3xl text-white mb-8 max-w-2xl font-serif"
   },
   {
     id: "minimal",
     name: "Clean Minimal",
-    titleClass: "text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight text-white tracking-wide",
-    descriptionClass: "text-2xl md:text-3xl text-white/90 mb-8 max-w-2xl uppercase tracking-wider"
+    titleClass: "text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight text-white tracking-wide",
+    descriptionClass: "text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 max-w-2xl uppercase tracking-wider"
   },
   {
     id: "creative",
     name: "Creative Display",
-    titleClass: "text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white tracking-tight",
-    descriptionClass: "text-2xl md:text-3xl text-white mb-8 max-w-2xl font-medium"
+    titleClass: "text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white tracking-tight",
+    descriptionClass: "text-xl md:text-2xl lg:text-3xl text-white mb-8 max-w-2xl font-medium"
   }
 ];
 
