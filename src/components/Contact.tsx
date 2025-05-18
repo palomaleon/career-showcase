@@ -65,69 +65,69 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-[#E85C33]">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 reveal">
-          Get In <span className="text-primary">Touch</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 reveal text-white">
+          Get In <span className="text-white/80">Touch</span>
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="lg:order-2 reveal" style={{ transitionDelay: '0.3s' }}>
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-white">Contact Information</h3>
             <div className="space-y-4 mb-8">
-              <Card>
+              <Card className="bg-white/10 border-none text-white">
                 <CardContent className="flex items-center gap-4 p-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Mail className="h-6 w-6 text-primary" />
+                  <div className="bg-white/10 p-3 rounded-full">
+                    <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">youremail@example.com</p>
+                    <p className="text-white/80">paloma.leonravest@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
               
-              <Card>
+              <Card className="bg-white/10 border-none text-white">
                 <CardContent className="flex items-center gap-4 p-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Phone className="h-6 w-6 text-primary" />
+                  <div className="bg-white/10 p-3 rounded-full">
+                    <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-muted-foreground">+1 (123) 456-7890</p>
+                    <p className="text-white/80">+61 402 184 505</p>
                   </div>
                 </CardContent>
               </Card>
               
-              <Card>
+              <Card className="bg-white/10 border-none text-white">
                 <CardContent className="flex items-center gap-4 p-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-primary" />
+                  <div className="bg-white/10 p-3 rounded-full">
+                    <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-muted-foreground">City, Country</p>
+                    <p className="text-white/80">Melbourne, Australia</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
             
-            <div className="bg-secondary/50 rounded-lg p-6 reveal" style={{ transitionDelay: '0.5s' }}>
+            <div className="bg-white/10 rounded-lg p-6 reveal text-white" style={{ transitionDelay: '0.5s' }}>
               <h4 className="text-lg font-medium mb-3">Availability</h4>
-              <p className="text-muted-foreground mb-4">
-                I'm currently <span className="text-primary font-medium">available</span> for freelance work or full-time positions. If you're interested in working together, please get in touch!
+              <p className="text-white/80 mb-4">
+                I'm currently <span className="text-white font-medium">available</span> for strategic design consultancy, workshop facilitation, and design strategy development. If you're interested in working together, please get in touch!
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-white/70">
                 I typically respond to messages within 24-48 hours.
               </p>
             </div>
           </div>
           
           <div className="lg:order-1 reveal" style={{ transitionDelay: '0.1s' }}>
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-white">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block mb-2 text-sm font-medium">
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">
                   Your Name
                 </label>
                 <Input
@@ -137,11 +137,12 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   placeholder="John Doe"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-white"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block mb-2 text-sm font-medium">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">
                   Your Email
                 </label>
                 <Input
@@ -152,11 +153,12 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   placeholder="john@example.com"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-white"
                 />
               </div>
               
               <div>
-                <label htmlFor="subject" className="block mb-2 text-sm font-medium">
+                <label htmlFor="subject" className="block mb-2 text-sm font-medium text-white">
                   Subject
                 </label>
                 <Input
@@ -166,11 +168,12 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   placeholder="Project Inquiry"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-white"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block mb-2 text-sm font-medium">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">
                   Message
                 </label>
                 <Textarea
@@ -181,10 +184,11 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   placeholder="Tell me about your project or inquiry..."
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-white"
                 />
               </div>
               
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-white text-[#E85C33] hover:bg-white/90" disabled={isSubmitting}>
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>

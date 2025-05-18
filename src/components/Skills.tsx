@@ -13,33 +13,33 @@ interface Skill {
 
 const skillsData: SkillCategory[] = [
   {
-    name: "Frontend",
+    name: "Strategic Design",
     skills: [
-      { name: "HTML & CSS", level: 5 },
-      { name: "JavaScript", level: 5 },
-      { name: "React", level: 4 },
-      { name: "TypeScript", level: 4 },
-      { name: "Tailwind CSS", level: 4 },
+      { name: "Design Thinking", level: 5 },
+      { name: "Service Design", level: 5 },
+      { name: "Human-Centered Design", level: 5 },
+      { name: "Systems Thinking", level: 4 },
+      { name: "Design Research", level: 5 },
     ],
   },
   {
-    name: "Backend",
+    name: "Design Methods",
     skills: [
-      { name: "Node.js", level: 4 },
-      { name: "Express", level: 4 },
-      { name: "MongoDB", level: 3 },
-      { name: "PostgreSQL", level: 3 },
-      { name: "REST APIs", level: 4 },
+      { name: "Workshop Facilitation", level: 5 },
+      { name: "Journey Mapping", level: 5 },
+      { name: "Stakeholder Engagement", level: 4 },
+      { name: "Persona Development", level: 4 },
+      { name: "Design Strategy", level: 4 },
     ],
   },
   {
-    name: "Tools & Others",
+    name: "Design Skills",
     skills: [
-      { name: "Git & GitHub", level: 5 },
-      { name: "CI/CD", level: 3 },
-      { name: "Docker", level: 3 },
-      { name: "Testing", level: 3 },
-      { name: "Agile/Scrum", level: 4 },
+      { name: "Industrial Design", level: 4 },
+      { name: "Graphic Design", level: 4 },
+      { name: "Wayfinding Systems", level: 4 },
+      { name: "Project Management", level: 4 },
+      { name: "Collaborative Design", level: 5 },
     ],
   },
 ];
@@ -69,7 +69,7 @@ const Skills: React.FC = () => {
     <section id="skills" className="section-padding bg-white">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 reveal">
-          My <span className="text-primary">Skills</span>
+          My <span className="text-[#E85C33]">Skills</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillsData.map((category, categoryIndex) => (
@@ -78,7 +78,7 @@ const Skills: React.FC = () => {
               className="reveal"
               style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
             >
-              <h3 className="text-xl font-semibold mb-6 text-center">
+              <h3 className="text-xl font-semibold mb-6 text-center text-[#E85C33]">
                 {category.name}
               </h3>
               <div className="space-y-4">
@@ -93,9 +93,9 @@ const Skills: React.FC = () => {
                          skill.level === 2 ? "Basic" : "Beginner"}
                       </span>
                     </div>
-                    <div className="w-full bg-secondary rounded-full h-2.5">
+                    <div className="w-full bg-[#E85C33]/10 rounded-full h-2.5">
                       <div 
-                        className="h-2.5 bg-primary rounded-full" 
+                        className="h-2.5 bg-[#E85C33] rounded-full" 
                         style={{ width: `${skill.level * 20}%` }}
                       ></div>
                     </div>
