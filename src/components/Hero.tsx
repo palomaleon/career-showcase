@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           PALOMA <span className="block">LEON RAVEST</span>
         </h1>
         <p className={`${currentStyle.descriptionClass} animate-fade-in`} style={{ animationDelay: '0.4s' }}>
-          PORTFOLIO
+          STRATEGIC DESIGNER & PROGRAM LEAD
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <Button size="lg" className="px-8 bg-white text-[#E85C33] hover:bg-white/90">
