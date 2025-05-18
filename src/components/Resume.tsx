@@ -1,8 +1,9 @@
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, Download, Briefcase, Book } from "lucide-react";
+import { useRevealAnimation } from "@/utils/animationUtils";
 
 interface Experience {
   id: number;
@@ -23,38 +24,41 @@ interface Education {
 const experiences: Experience[] = [
   {
     id: 1,
-    role: "Senior Frontend Developer",
-    company: "Tech Company XYZ",
-    duration: "2022 - Present",
+    role: "Strategy Consultant",
+    company: "Accelio",
+    duration: "2023 - 2025",
     description: [
-      "Developed and maintained multiple React-based web applications",
-      "Implemented responsive designs and improved application performance by 40%",
-      "Collaborated with UX designers to create intuitive user interfaces",
-      "Mentored junior developers and led code reviews",
+      "Led Impact Sprint programs to transform research teams' capabilities in market alignment and entrepreneurial innovation",
+      "Facilitated strategic workshops using FAST-TRAC methodology to help research teams validate assumptions and refine project strategies",
+      "Conducted stakeholder discovery engagements with industry, government, and academia to identify systemic challenges and opportunities",
+      "Developed Translation Impact Plans that consolidated insights and outlined actionable roadmaps for research translation",
+      "Achieved measurable results including $1.5M savings through operational restructuring and 31% reduction in team resources while maintaining output",
     ],
   },
   {
     id: 2,
-    role: "Web Developer",
-    company: "Digital Agency ABC",
-    duration: "2020 - 2022",
+    role: "Research Strategy Consultant",
+    company: "CSIRO Collaboration",
+    duration: "2023 - 2025",
     description: [
-      "Built responsive websites for various clients using modern web technologies",
-      "Implemented e-commerce solutions with payment gateway integrations",
-      "Created custom WordPress themes and plugins",
-      "Worked closely with clients to ensure project requirements were met",
+      "Partnered with CSIRO's Biosecurity APAIR and Critical Minerals teams to embed market-facing practices into research processes",
+      "Designed and led an eight-week national stakeholder discovery engagement involving 21 structured interviews across industry sectors",
+      "Synthesized over 3500 insights into actionable findings aligned with strategic goals and learning objectives",
+      "Identified 7 systemic challenges and 9 targeted interventions across infrastructure development, investment models, and innovation coordination",
+      "Positioned research teams to secure new funding opportunities through evidence-based alignment with market needs",
     ],
   },
   {
     id: 3,
-    role: "Frontend Intern",
-    company: "Startup Inc.",
-    duration: "2019 - 2020",
+    role: "Workshop Facilitator",
+    company: "Research & Innovation Sector",
+    duration: "2022 - 2023",
     description: [
-      "Assisted in developing UI components using HTML, CSS, and JavaScript",
-      "Participated in team code reviews and implemented feedback",
-      "Gained experience with version control and collaborative development",
-      "Learned best practices for web accessibility and performance optimization",
+      "Facilitated experiential training sessions that equipped researchers with practical tools to assess project-market fit",
+      "Led immersive workshops focused on ecosystem mapping, customer pain points identification, and assumption validation",
+      "Guided teams through customer conversations and stakeholder engagement strategies to validate market opportunities",
+      "Created structured frameworks for researchers to evaluate ideas through user and translation lenses",
+      "Helped teams move from purely scientific thinking to commercially innovative approaches across Business Units",
     ],
   },
 ];
@@ -62,40 +66,22 @@ const experiences: Experience[] = [
 const education: Education[] = [
   {
     id: 1,
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Master's in Business Strategy",
     institution: "University Name",
-    duration: "2015 - 2019",
-    description: "Focused on software engineering, web development, and database systems.",
+    duration: "2018 - 2020",
+    description: "Focused on strategic innovation, market research methodologies, and stakeholder engagement frameworks.",
   },
   {
     id: 2,
-    degree: "Web Development Bootcamp",
-    institution: "Coding Academy",
-    duration: "2019",
-    description: "Intensive 12-week program covering full-stack web development.",
+    degree: "Bachelor of Science",
+    institution: "University Name",
+    duration: "2014 - 2018",
+    description: "Core studies in research methodologies, data analysis, and scientific communication.",
   },
 ];
 
 const Resume: React.FC = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const revealElements = document.querySelectorAll(".reveal");
-    revealElements.forEach((el) => observer.observe(el));
-
-    return () => {
-      revealElements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
+  useRevealAnimation();
 
   return (
     <section id="resume" className="section-padding bg-secondary/50">
@@ -166,20 +152,27 @@ const Resume: React.FC = () => {
 
             <Card className="mt-8 reveal" style={{ transitionDelay: '0.5s' }}>
               <CardContent className="pt-6">
-                <h4 className="text-lg font-medium mb-4">Certifications</h4>
+                <h4 className="text-lg font-medium mb-4">Skills & Certifications</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium">Web Development Certification</p>
-                      <p className="text-sm text-muted-foreground">Issued by: Certification Provider, 2021</p>
+                      <p className="font-medium">Strategy Activation & Research Translation</p>
+                      <p className="text-sm text-muted-foreground">Impact Sprint Program facilitation, FAST-TRAC methodology</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium">Advanced JavaScript Masterclass</p>
-                      <p className="text-sm text-muted-foreground">Issued by: JavaScript Academy, 2020</p>
+                      <p className="font-medium">Stakeholder Engagement & Discovery</p>
+                      <p className="text-sm text-muted-foreground">Structured interview methodologies, insight synthesis</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Workshop Facilitation & Training</p>
+                      <p className="text-sm text-muted-foreground">Experiential learning, ecosystem mapping, assumption validation</p>
                     </div>
                   </li>
                 </ul>
